@@ -1,8 +1,10 @@
 # QA Auto Playwright Saucedemo
 
-UI autotests for the SauceDemo web application using Playwright and TypeScript.
+Небольшой проект с UI-автотестами для сайта SauceDemo.
 
-## Stack
+Писала его как практику по Playwright и TypeScript: разобрала авторизацию, работу с товарами, корзину и оформление заказа. В проекте использую Page Object, отдельные тестовые данные и запуск тестов через GitHub Actions.
+
+## Стек
 
 - TypeScript
 - Playwright
@@ -10,56 +12,57 @@ UI autotests for the SauceDemo web application using Playwright and TypeScript.
 - GitHub Actions
 - Git
 
-## Covered scenarios
+## Что проверяется
 
-- successful login
-- negative login validation
-- locked out user login
-- product list display
-- product sorting
-- product details page
-- add product to cart
-- remove product from cart
-- checkout form validation
-- successful checkout
+- вход с валидными данными
+- ошибки при пустом логине или пароле
+- ошибка при неверном пароле
+- вход заблокированного пользователя
+- отображение списка товаров
+- сортировка товаров по цене
+- открытие карточки товара
+- добавление товара в корзину
+- удаление товара из корзины
+- ошибки в форме оформления заказа
+- успешное оформление заказа
 
-## Project structure
+## Структура проекта
 
 ```text
-tests/      - test specs
-pages/      - Page Object classes
-fixtures/   - test data
-docs/       - test documentation
+tests/      - тесты
+pages/      - Page Object классы
+fixtures/   - тестовые данные
+docs/       - тестовая документация
 ```
 
-## Install
+## Установка
 
 ```bash
 npm install
 npx playwright install
 ```
 
-## Run tests
+## Запуск тестов
 
 ```bash
 npm test
 ```
 
-## Run tests in headed mode
+## Запуск в видимом браузере
 
 ```bash
 npm run test:headed
 ```
 
-## Open HTML report
+## HTML-отчёт
 
 ```bash
 npm run report
 ```
 
-## Test documentation
+## Тест-кейсы
 
-Test cases are stored in:
+Тест-кейсы лежат в файле:
 
 ```text
 docs/test-cases.md
